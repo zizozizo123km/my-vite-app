@@ -1,0 +1,113 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for the modern e-commerce store */
+
+@layer base {
+  :root {
+    --color-primary: #10b981; /* Emerald 500 */
+    --color-secondary: #f59e0b; /* Amber 500 */
+    --color-background: #f9fafb; /* Gray 50 */
+    --color-text: #1f2937; /* Gray 800 */
+    --color-text-light: #4b5563; /* Gray 600 */
+    --color-border: #e5e7eb; /* Gray 200 */
+    --color-card-bg: #ffffff;
+    --color-error: #ef4444; /* Red 500 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased;
+    font-family: 'Inter', 'Arial', sans-serif; /* Use Inter or a suitable modern font */
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar for a cleaner look (optional, but good for modern design) */
+  /* Works primarily on Webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-light);
+  }
+}
+
+/* Custom components and utilities */
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 font-semibold rounded-lg transition duration-300 ease-in-out shadow-md;
+    @apply bg-emerald-500 text-white hover:bg-emerald-600 focus:outline-none focus:ring-4 focus:ring-emerald-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 font-semibold rounded-lg transition duration-300 ease-in-out border border-gray-300;
+    @apply bg-white text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl border border-gray-100;
+  }
+
+  .input-field {
+    @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition duration-150;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient-primary {
+    background-image: linear-gradient(to right, var(--color-primary), #34d399); /* Emerald 500 to 400 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Utility overrides and additions */
+
+@layer utilities {
+  /* Custom utility for aspect ratio (if not using Tailwind's built-in aspect-ratio plugin) */
+  .aspect-product {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+}
+
+/* Ensure icons are styled correctly */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Add a subtle focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
