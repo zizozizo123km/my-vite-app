@@ -1,0 +1,104 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+.report.*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for installing dependencies
+node_modules/
+jspm_packages/
+
+# TypeScript cache files
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional Prettier cache
+.prettiercache
+
+# Optional Deno cache
+.deno/
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging.local
+
+# Next.js build output
+.next/
+out/
+
+# Nuxt.js build output
+.nuxt/
+.output/
+
+# Gatsby files
+.cache/
+public/
+
+# SvelteKit build output
+.svelte-kit/
+build/
+
+# Remix files
+build/
+
+# Vite build output
+dist/
+dist-ssr/
+coverage/
+
+# Storybook files
+storybook-static/
+
+# Docusaurus files
+build/
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# VS Code files
+.vscode/
+
+# Editor/OS generated files
+.DS_Store
+Thumbs.db
+.idea/
+.vs/
+*.swp
+*~
+~*
+# End of file marker
